@@ -1,10 +1,10 @@
 ---
 title: Jenkins
 created: '2021-04-25T08:57:26.697Z'
-modified: '2021-05-06T05:43:58.484Z'
+modified: '2021-05-11T06:35:29.871Z'
 ---
 
-# Jenkins
+## Jenkins
 
 构建完成后 command 使用CURL请求接口
 ```

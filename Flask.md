@@ -1,10 +1,10 @@
 ---
 title: Flask
 created: '2021-04-21T01:07:05.341Z'
-modified: '2021-04-25T08:07:54.542Z'
+modified: '2021-05-11T06:35:32.733Z'
 ---
 
-### Flask
+## Flask
 
 ##### Flask-Migrate 数据库迁移常用命令
 

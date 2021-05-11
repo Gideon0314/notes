@@ -1,10 +1,10 @@
 ---
 title: Pytest
 created: '2021-05-10T05:45:39.690Z'
-modified: '2021-05-11T03:19:23.306Z'
+modified: '2021-05-11T06:35:42.130Z'
 ---
 
-### Pytest
+## Pytest
 
 #### 常用命令行参数
 
@@ -37,16 +37,24 @@ pytest -s --durations=0 -vv 查看每条用例的运行时间
 ```
 #### pytest.fixture()的使用
 ```python
-# fixture内置两个参数
-# scope='function'
-# scope='class'
-# scope='module'
-# scope='session'
+# fixture 内置两个参数
+# scope='function'  函数级别，每一个函数调用一次
+# scope='class'     类级别，每一个类调用一次
+# scope='module'    模块级别，每一个py文件调用一次
+# scope='session'   会话级别，在所以测试用例执行前调用一次
+# autouse 默认为false，当为True时，无需调用即自动执行
 
 @pytest.fixture(scope='session', autouse=True)
 def login():
+  token = ''
+  return token
+
+# 调用fixture,方法1
+def test_case_01(login):
   pass
 
+# 调用fixture，方法2
+@pytest.mark.usefixtures(login)
 def test_case_01(login):
   pass
 ```
