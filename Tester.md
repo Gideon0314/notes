@@ -1,7 +1,7 @@
 ---
 title: Tester
 created: '2021-04-21T02:05:31.386Z'
-modified: '2021-05-11T09:31:47.649Z'
+modified: '2021-05-16T14:39:31.567Z'
 ---
 
 ## Tester
@@ -10,7 +10,7 @@ modified: '2021-05-11T09:31:47.649Z'
 ```cmd
 [root@CentOS www]# cd tester_web
 [root@CentOS tester_web]# cnpm install
-[root@CentOS tester_web]# npm run build
+[root@CentOS tester_web]# npm run build:prod
 [root@CentOS tester_web]# mkdir -p ../docker/nginx/data
 [root@CentOS tester_web]# cp -a dist/* ../docker/nginx/data
 [root@CentOS tester_web]# cd ..
